@@ -10,8 +10,12 @@ import {
   Instagram,
   Linkedin,
   Twitter,
+  BellRing,
+  Volume2,
+  NotebookTabs ,
+  Languages,
 } from "lucide-react";
-
+import { Mail } from 'lucide-react';
 function App() {
   return (
     <div className="min-h-screen bg-white">
@@ -28,11 +32,7 @@ function App() {
           <div className="flex items-center space-x-4">
             <div className="hidden md:flex items-center space-x-4 text-sm">
               <div className="flex items-center text-blue-600">
-                <img
-                  src="https://images.unsplash.com/photo-1526855743393-9a8b07d4d0f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=20&q=80"
-                  alt=""
-                  className="w-5 h-5 mr-1"
-                />
+                <Languages  className="w-5 h-5 mr-1" />
                 <span className="mr-1">EN</span>
                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none">
                   <path
@@ -51,40 +51,25 @@ function App() {
                 Investor Relations
               </a>
               <a href="#" className="hover:text-blue-600 flex items-center">
-                <img
-                  src="https://images.unsplash.com/photo-1526855743393-9a8b07d4d0f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=20&q=80"
-                  alt=""
-                  className="w-5 h-5 mr-1"
-                />
+              <Mail  className="w-5 h-5 mr-1"/>
+               
                 Leads
               </a>
               <a href="#" className="hover:text-blue-600 flex items-center">
-                <img
-                  src="https://images.unsplash.com/photo-1526855743393-9a8b07d4d0f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=20&q=80"
-                  alt=""
-                  className="w-5 h-5 mr-1"
-                />
+            <Volume2  className="w-5 h-5 mr-1"/>
                 Advertise
               </a>
               <a
                 href="#"
                 className="text-blue-600 hover:underline flex items-center"
               >
-                <img
-                  src="https://images.unsplash.com/photo-1526855743393-9a8b07d4d0f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=20&q=80"
-                  alt=""
-                  className="w-5 h-5 mr-1"
-                />
+                <NotebookTabs  className="w-5 h-5 mr-1"/>
                 Free Listing
               </a>
             </div>
             <div className="flex items-center">
               <a href="#" className="mr-2">
-                <img
-                  src="https://images.unsplash.com/photo-1526855743393-9a8b07d4d0f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=20&q=80"
-                  alt=""
-                  className="w-6 h-6"
-                />
+              <BellRing className="w-5 h-5 mr-1"/>
               </a>
               <button className="bg-blue-600 text-white px-4 py-1 rounded hover:bg-blue-700">
                 Login / Sign Up
