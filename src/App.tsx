@@ -1,5 +1,16 @@
-import React, { useState } from 'react';
-import { Search, MapPin, Mic, ChevronRight, ChevronLeft, Facebook, Youtube, Instagram, Linkedin, Twitter } from 'lucide-react';
+import React, { useState } from "react";
+import {
+  Search,
+  MapPin,
+  Mic,
+  ChevronRight,
+  ChevronLeft,
+  Facebook,
+  Youtube,
+  Instagram,
+  Linkedin,
+  Twitter,
+} from "lucide-react";
 
 function App() {
   return (
@@ -12,28 +23,73 @@ function App() {
               <span className="text-blue-600">Just</span>
               <span className="text-orange-500">dial</span>
             </a>
-            <div className="ml-4 hidden md:flex items-center">
-              <span className="bg-blue-100 text-blue-600 px-2 py-1 rounded text-sm">BUSINESS</span>
-            </div>
           </div>
-          
+
           <div className="flex items-center space-x-4">
-            <div className="hidden md:flex items-center space-x-1 text-sm">
-              <span className="flex items-center text-blue-600">
+            <div className="hidden md:flex items-center space-x-4 text-sm">
+              <div className="flex items-center text-blue-600">
+                <img
+                  src="https://images.unsplash.com/photo-1526855743393-9a8b07d4d0f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=20&q=80"
+                  alt=""
+                  className="w-5 h-5 mr-1"
+                />
                 <span className="mr-1">EN</span>
                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none">
-                  <path d="M6 9l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path
+                    d="M6 9l6 6 6-6"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
                 </svg>
-              </span>
-              <a href="#" className="hover:text-blue-600">We are Hiring</a>
-              <a href="#" className="hover:text-blue-600">Investor Relations</a>
-              <a href="#" className="hover:text-blue-600">Leads</a>
-              <a href="#" className="hover:text-blue-600">Advertise</a>
-              <a href="#" className="text-blue-600 hover:underline">Free Listing</a>
+              </div>
+              <a href="#" className="hover:text-blue-600">
+                We are Hiring
+              </a>
+              <a href="#" className="hover:text-blue-600">
+                Investor Relations
+              </a>
+              <a href="#" className="hover:text-blue-600 flex items-center">
+                <img
+                  src="https://images.unsplash.com/photo-1526855743393-9a8b07d4d0f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=20&q=80"
+                  alt=""
+                  className="w-5 h-5 mr-1"
+                />
+                Leads
+              </a>
+              <a href="#" className="hover:text-blue-600 flex items-center">
+                <img
+                  src="https://images.unsplash.com/photo-1526855743393-9a8b07d4d0f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=20&q=80"
+                  alt=""
+                  className="w-5 h-5 mr-1"
+                />
+                Advertise
+              </a>
+              <a
+                href="#"
+                className="text-blue-600 hover:underline flex items-center"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1526855743393-9a8b07d4d0f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=20&q=80"
+                  alt=""
+                  className="w-5 h-5 mr-1"
+                />
+                Free Listing
+              </a>
             </div>
-            <button className="bg-blue-600 text-white px-4 py-1 rounded hover:bg-blue-700">
-              Login / Sign Up
-            </button>
+            <div className="flex items-center">
+              <a href="#" className="mr-2">
+                <img
+                  src="https://images.unsplash.com/photo-1526855743393-9a8b07d4d0f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=20&q=80"
+                  alt=""
+                  className="w-6 h-6"
+                />
+              </a>
+              <button className="bg-blue-600 text-white px-4 py-1 rounded hover:bg-blue-700">
+                Login / Sign Up
+              </button>
+            </div>
           </div>
         </div>
       </header>
@@ -42,22 +98,23 @@ function App() {
       <section className="py-6 bg-white">
         <div className="container mx-auto px-4">
           <h1 className="text-2xl font-bold mb-4">
-            Search across <span className="text-gray-700">' 5.9 Crore+'</span> <span className="text-blue-600">Products & Services</span>
+            Search across <span className="text-gray-700">' 5.9 Crore+'</span>{" "}
+            <span className="text-blue-600">Products & Services</span>
           </h1>
-          
+
           <div className="flex flex-col md:flex-row gap-2 mb-6">
             <div className="border rounded-md flex items-center px-3 py-2 flex-1 max-w-xs">
               <MapPin className="text-gray-400 mr-2" size={20} />
-              <input 
-                type="text" 
-                placeholder="Mansarovar, Jaipur" 
+              <input
+                type="text"
+                placeholder="Mansarovar, Jaipur"
                 className="outline-none w-full"
               />
             </div>
             <div className="border rounded-md flex items-center px-3 py-2 flex-1">
-              <input 
-                type="text" 
-                placeholder="Search for Spa & Salons" 
+              <input
+                type="text"
+                placeholder="Search for Spa & Salons"
                 className="outline-none w-full"
               />
               <Mic className="text-blue-600 mx-2" size={20} />
@@ -83,18 +140,24 @@ function App() {
       <section className="mb-8 relative">
         <div className="container mx-auto px-4">
           <div className="relative rounded-lg overflow-hidden">
-            <img 
-              src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
-              alt="Travel Banner" 
+            <img
+              src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Travel Banner"
               className="w-full h-64 object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-blue-400/80 to-transparent flex flex-col justify-center pl-12">
-              <h2 className="text-2xl font-bold text-white mb-2">Time to fly at</h2>
-              <h3 className="text-3xl font-bold text-white mb-4">Lowest Airfares</h3>
+              <h2 className="text-2xl font-bold text-white mb-2">
+                Time to fly at
+              </h2>
+              <h3 className="text-3xl font-bold text-white mb-4">
+                Lowest Airfares
+              </h3>
               <button className="bg-blue-800 text-white px-6 py-2 rounded-md w-max hover:bg-blue-900">
                 Book Now
               </button>
-              <div className="mt-4 text-white text-sm">Powered by EaseMyTrip.com</div>
+              <div className="mt-4 text-white text-sm">
+                Powered by EaseMyTrip.com
+              </div>
             </div>
           </div>
         </div>
@@ -102,32 +165,32 @@ function App() {
         {/* Service Categories Slider */}
         <div className="container mx-auto px-4 -mt-6 relative z-10">
           <div className="flex overflow-x-auto gap-4 pb-4">
-            <ServiceCard 
-              title="B2B" 
+            <ServiceCard
+              title="B2B"
               subtitle="Quick Quotes"
               bgColor="bg-blue-600"
               imgUrl="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
             />
-            <ServiceCard 
-              title="REPAIRS & SERVICES" 
+            <ServiceCard
+              title="REPAIRS & SERVICES"
               subtitle="Get Nearest Vendor"
               bgColor="bg-blue-800"
               imgUrl="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
             />
-            <ServiceCard 
-              title="REAL ESTATE" 
+            <ServiceCard
+              title="REAL ESTATE"
               subtitle="Finest Agents"
               bgColor="bg-indigo-600"
               imgUrl="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
             />
-            <ServiceCard 
-              title="DOCTORS" 
+            <ServiceCard
+              title="DOCTORS"
               subtitle="Book Now"
               bgColor="bg-emerald-600"
               imgUrl="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
             />
           </div>
-          
+
           <div className="absolute top-1/2 -left-4 transform -translate-y-1/2">
             <button className="bg-white rounded-full p-2 shadow-md hover:bg-gray-100">
               <ChevronLeft size={24} />
@@ -156,7 +219,7 @@ function App() {
             <CategoryIcon title="Contractors" icon="👷‍♂️" />
             <CategoryIcon title="Pet Shops" icon="🐾" />
           </div>
-          
+
           <div className="grid grid-cols-5 md:grid-cols-10 gap-4 mt-4">
             <CategoryIcon title="PG/Hostels" icon="🏠" />
             <CategoryIcon title="Estate Agent" icon="👥" />
@@ -176,77 +239,89 @@ function App() {
       <section className="mb-8">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <ServiceSection 
-              title="Wedding Requisites" 
+            <ServiceSection
+              title="Wedding Requisites"
               services={[
                 {
                   name: "Banquet Halls",
-                  image: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                  image:
+                    "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
                 },
                 {
                   name: "Bridal Requisite",
-                  image: "https://images.unsplash.com/photo-1594472436416-4b5a5f2e0795?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                  image:
+                    "https://images.unsplash.com/photo-1594472436416-4b5a5f2e0795?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
                 },
                 {
                   name: "Caterers",
-                  image: "https://images.unsplash.com/photo-1555244162-803834f70033?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                }
+                  image:
+                    "https://images.unsplash.com/photo-1555244162-803834f70033?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                },
               ]}
             />
-            
-            <ServiceSection 
-              title="Beauty & Spa" 
+
+            <ServiceSection
+              title="Beauty & Spa"
               services={[
                 {
                   name: "Beauty Parlours",
-                  image: "https://images.unsplash.com/photo-1560750588-73207b1ef5b8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                  image:
+                    "https://images.unsplash.com/photo-1560750588-73207b1ef5b8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
                 },
                 {
                   name: "Spa & Massages",
-                  image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                  image:
+                    "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
                 },
                 {
                   name: "Salons",
-                  image: "https://images.unsplash.com/photo-1562322140-8baeececf3df?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                }
+                  image:
+                    "https://images.unsplash.com/photo-1562322140-8baeececf3df?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                },
               ]}
             />
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-            <ServiceSection 
-              title="Repairs & Services" 
+            <ServiceSection
+              title="Repairs & Services"
               services={[
                 {
                   name: "AC Service",
-                  image: "https://images.unsplash.com/photo-1581275288578-bfb98e9d2d9a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                  image:
+                    "https://images.unsplash.com/photo-1581275288578-bfb98e9d2d9a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
                 },
                 {
                   name: "Car Service",
-                  image: "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                  image:
+                    "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
                 },
                 {
                   name: "Bike Service",
-                  image: "https://images.unsplash.com/photo-1558981852-426c6c22a060?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                }
+                  image:
+                    "https://images.unsplash.com/photo-1558981852-426c6c22a060?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                },
               ]}
             />
-            
-            <ServiceSection 
-              title="Daily Needs" 
+
+            <ServiceSection
+              title="Daily Needs"
               services={[
                 {
                   name: "Movies",
-                  image: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                  image:
+                    "https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
                 },
                 {
                   name: "Grocery",
-                  image: "https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                  image:
+                    "https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
                 },
                 {
                   name: "Electricians",
-                  image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                }
+                  image:
+                    "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                },
               ]}
             />
           </div>
@@ -261,17 +336,21 @@ function App() {
               <div>
                 <div className="flex items-center mb-2">
                   <h2 className="text-2xl font-bold">Bills & Recharge</h2>
-                  <img 
-                    src="https://images.unsplash.com/photo-1614332287897-cdc485fa562d?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=60" 
-                    alt="Bharat Connect" 
+                  <img
+                    src="https://images.unsplash.com/photo-1614332287897-cdc485fa562d?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=60"
+                    alt="Bharat Connect"
                     className="h-6 ml-2"
                   />
                 </div>
-                <p className="text-sm text-gray-600">Pay your bills & recharge instantly with Justdial</p>
-                <a href="#" className="text-blue-600 text-sm hover:underline">Explore More</a>
+                <p className="text-sm text-gray-600">
+                  Pay your bills & recharge instantly with Justdial
+                </p>
+                <a href="#" className="text-blue-600 text-sm hover:underline">
+                  Explore More
+                </a>
               </div>
             </div>
-            
+
             <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
               <BillCategory name="Mobile" icon="📱" />
               <BillCategory name="Electricity" icon="💡" />
@@ -284,70 +363,39 @@ function App() {
         </div>
       </section>
 
-      {/* Recent Activity */}
+      {/* travel */}
+
+      {/* Bills & Recharge Section */}
       <section className="mb-8">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-bold mb-4">Recent Activity</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <ActivityCard 
-              businessName="Shree Vinita Computer"
-              location="Mansarovar - Jaipur"
-              image="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-              reviewer={{
-                name: "Vikram",
-                image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=60",
-                rating: 5,
-                review: "I recently purchased a laptop from VINITA COMPUTER and opted for the extended warranty. The process was smooth, and the staff was very helpful in explaining the benefits. I feel..."
-              }}
-            />
-            
-            <ActivityCard 
-              businessName="Shivgay Mobiles & More"
-              location="Mansarovar - Jaipur"
-              image="https://images.unsplash.com/photo-1556656793-08538906a9f8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-              reviewer={{
-                name: "Healthy Lifestyle",
-                image: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=60",
-                rating: 5,
-                review: "Shivgay Mobiles & More is a great place to buy electronic products. The staff is polite and helpful, and the management is prompt in addressing any concerns. I also..."
-              }}
-            />
-            
-            <ActivityCard 
-              businessName="RECT SERVICES"
-              location="Gopalpura Bypass - Jaipur"
-              image="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-              reviewer={{
-                name: "Rahul",
-                image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=60",
-                rating: 5,
-                review: "The service was excellent. I got my laptop repaired without delay. The behaviour of it was very professional and polite."
-              }}
-            />
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
-            <ActivityCard 
-              businessName="Jain Compu Care"
-              location="Mansarovar - Jaipur"
-              image="https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-              hideReviewer={true}
-            />
-            
-            <ActivityCard 
-              businessName="LG Service Center Jaipur"
-              location="Mansarovar - Jaipur"
-              image="https://images.unsplash.com/photo-1581092921461-39b9d08a9b21?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-              hideReviewer={true}
-            />
-            
-            <ActivityCard 
-              businessName="Server Plus"
-              location="Gopalpura Bypass - Jaipur"
-              image="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-              hideReviewer={true}
-            />
+          <div className="border rounded-lg p-6">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
+              <div>
+                <div className="flex items-center mb-2">
+                  <h2 className="text-2xl font-bold">Travel Bookings</h2>
+                  <img
+                    src="https://images.unsplash.com/photo-1614332287897-cdc485fa562d?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=60"
+                    alt="Bharat Connect"
+                    className="h-6 ml-2"
+                  />
+                </div>
+                <p className="text-sm text-gray-600">
+                  Instant ticket bookings for your best travel experience
+                </p>
+                <a href="#" className="text-blue-600 text-sm hover:underline">
+                  Explore More
+                </a>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
+              <BillCategory name="Flight" icon="📱" />
+              <BillCategory name="Bus" icon="💡" />
+              <BillCategory name="Train" icon="📺" />
+              <BillCategory name="Hotel" icon="💧" />
+              <BillCategory name="car rental" icon="🔥" />
+              {/* <BillCategory name="Insurance" icon="🛡️" /> */}
+            </div>
           </div>
         </div>
       </section>
@@ -355,27 +403,29 @@ function App() {
       {/* Explore Top Cities */}
       <section className="mb-8">
         <div className="container mx-auto px-4">
-          <div className="border rounded-lg p-6">
+          <div className="border rounded-lg p-4">
             <div className="flex items-center mb-6">
               <h2 className="text-2xl font-bold">Explore Top Cities</h2>
-              <span className="ml-2 bg-red-500 text-white text-xs px-2 py-1 rounded">NEW</span>
+              <span className="ml-2 bg-red-500 text-white text-xs px-2 py-1 rounded">
+                NEW
+              </span>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-              <CityCard 
-                name="MUMBAI" 
+              <CityCard
+                name="MUMBAI"
                 image="https://images.unsplash.com/photo-1529253355930-ddbe423a2ac7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
               />
-              <CityCard 
-                name="BANGALORE" 
+              <CityCard
+                name="BANGALORE"
                 image="https://images.unsplash.com/photo-1596176530529-78163a4f7af2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
               />
-              <CityCard 
-                name="DELHI" 
+              <CityCard
+                name="DELHI"
                 image="https://images.unsplash.com/photo-1587474260584-136574528ed5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
               />
-              <CityCard 
-                name="KOLKATA" 
+              <CityCard
+                name="KOLKATA"
                 image="https://images.unsplash.com/photo-1558431382-27e303142255?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
               />
             </div>
@@ -387,36 +437,166 @@ function App() {
       <section className="mb-8">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold mb-4">Popular Searches</h2>
-          
+
           <div className="relative">
             <div className="flex overflow-x-auto gap-4 pb-4">
-              <PopularSearchCard 
+              <PopularSearchCard
                 title="Women Kurti Manufacturers"
                 image="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
               />
-              <PopularSearchCard 
+              <PopularSearchCard
                 title="Interior Designers"
                 image="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
               />
-              <PopularSearchCard 
+              <PopularSearchCard
                 title="Real Estate Agents"
                 image="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
               />
-              <PopularSearchCard 
+              <PopularSearchCard
                 title="Paying Guest Accommodations"
                 image="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
               />
-              <PopularSearchCard 
+              <PopularSearchCard
                 title="Banquet Halls"
                 image="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
               />
             </div>
-            
+
             <div className="absolute top-1/2 right-0 transform -translate-y-1/2">
               <button className="bg-white rounded-full p-2 shadow-md hover:bg-gray-100">
                 <ChevronRight size={24} />
               </button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Cool Day Essentials */}
+      <section className="mb-8">
+        <div className="container mx-auto px-4">
+          <div className="border rounded-lg p-4">
+            <div className="flex items-center">
+              <h2 className="text-2xl font-bold">Cool Day Essentials</h2>
+
+              <span className="ml-2 bg-red-500 text-white text-xs px-2 py-1 rounded">
+                SEASONAL
+              </span>
+            </div>
+            <h2 className="mt">Discover wide range of winter collection</h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+              <CityCard
+                name="HEADPHONE"
+                image="https://images.unsplash.com/photo-1659353888477-6e6aab941b55?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              />
+              <CityCard
+                name="CATERERS"
+                image="https://plus.unsplash.com/premium_photo-1687089575952-1d06765f2229?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              />
+              <CityCard
+                name="FISHING EQUIPMENT"
+                image="https://plus.unsplash.com/premium_photo-1726848057778-a87a90c6be3b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              />
+              <CityCard
+                name="SKIN CARE PRODUCT"
+                image="https://images.unsplash.com/photo-1567721913486-6585f069b332?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Recent Activity */}
+      <section className="mb-8">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl font-bold mb-4">Recent Activity</h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <ActivityCard
+              businessName="Shree Vinita Computer"
+              location="Mansarovar - Jaipur"
+              image="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+              reviewer={{
+                name: "Vikram",
+                image:
+                  "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=60",
+                rating: 5,
+                review:
+                  "I recently purchased a laptop from VINITA COMPUTER and opted for the extended warranty. The process was smooth, and the staff was very helpful in explaining the benefits. I feel...",
+              }}
+            />
+
+            <ActivityCard
+              businessName="Shivgay Mobiles & More"
+              location="Mansarovar - Jaipur"
+              image="https://images.unsplash.com/photo-1556656793-08538906a9f8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+              reviewer={{
+                name: "Healthy Lifestyle",
+                image:
+                  "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=60",
+                rating: 5,
+                review:
+                  "Shivgay Mobiles & More is a great place to buy electronic products. The staff is polite and helpful, and the management is prompt in addressing any concerns. I also...",
+              }}
+            />
+
+            <ActivityCard
+              businessName="RECT SERVICES"
+              location="Gopalpura Bypass - Jaipur"
+              image="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+              reviewer={{
+                name: "Rahul",
+                image:
+                  "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=60",
+                rating: 5,
+                review:
+                  "The service was excellent. I got my laptop repaired without delay. The behaviour of it was very professional and polite.",
+              }}
+            />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+            <ActivityCard
+              businessName="Jain Compu Care"
+              location="Mansarovar - Jaipur"
+              image="https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+              reviewer={{
+                name: "Rahul",
+                image:
+                  "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=60",
+                rating: 5,
+                review:
+                  "The service was excellent. I got my laptop repaired without delay. The behaviour of it was very professional and polite.",
+              }}
+            />
+
+            <ActivityCard
+              businessName="LG Service Center Jaipur"
+              location="Mansarovar - Jaipur"
+              image="https://images.unsplash.com/photo-1614624532983-4ce03382d63d?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              reviewer={{
+                name: "Rahul",
+                image:
+                  "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=60",
+                rating: 5,
+                review:
+                  "The service was excellent. I got my laptop repaired without delay. The behaviour of it was very professional and polite.",
+              }}
+            />
+
+            <ActivityCard
+              businessName="Server Plus"
+              location="Gopalpura Bypass - Jaipur"
+              image="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+              reviewer={{
+                name: "Rahul",
+                image:
+                  "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=60",
+                rating: 5,
+                review:
+                  "The service was excellent. I got my laptop repaired without delay. The behaviour of it was very professional and polite.",
+              }}
+            />
           </div>
         </div>
       </section>
@@ -445,37 +625,60 @@ function App() {
                 </a>
               </div>
             </div>
-            
+
             <div className="flex space-x-2 mb-4">
-              <img 
-                src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" 
-                alt="Get it on Google Play" 
+              <img
+                src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                alt="Get it on Google Play"
                 className="h-10"
               />
-              <img 
-                src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" 
-                alt="Download on the App Store" 
+              <img
+                src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg"
+                alt="Download on the App Store"
                 className="h-10"
               />
             </div>
           </div>
-          
-          <h2 className="text-xl font-bold mb-4">One-Stop for All Local Businesses, Services, & Stores Nearby Across India</h2>
-          
+
+          <h2 className="text-xl font-bold mb-4">
+            One-Stop for All Local Businesses, Services, & Stores Nearby Across
+            India
+          </h2>
+
           <p className="text-sm text-gray-600 mb-4">
-            Welcome to Justdial, your 'one stop shop' where you are assisted with day-to-day and exclusive planning and purchasing activities. We take pride in our iconic customer support number, 8888888888 and the fact that we own a strong hold on local business information pan India.
+            Welcome to Justdial, your 'one stop shop' where you are assisted
+            with day-to-day and exclusive planning and purchasing activities. We
+            take pride in our iconic customer support number, 8888888888 and the
+            fact that we own a strong hold on local business information pan
+            India.
           </p>
-          
+
           <p className="text-sm text-gray-600 mb-4">
-            Our service extends from providing address and contact details of business establishments around the country, to making orders and reservations for leisure, medical, financial, travel and domestic purposes. We enlist business information across varied sectors like Hotels, Restaurants, Auto Care, Home Decor, Personal and Pet Care, Fitness, Insurance, Real Estate, Sports, Schools, etc. from all over the country. Holding information right from major cities like Mumbai, Delhi, Bangalore, Hyderabad, Chennai, Ahmedabad and Pune our reach stretches out to other smaller cities across the country too.
+            Our service extends from providing address and contact details of
+            business establishments around the country, to making orders and
+            reservations for leisure, medical, financial, travel and domestic
+            purposes. We enlist business information across varied sectors like
+            Hotels, Restaurants, Auto Care, Home Decor, Personal and Pet Care,
+            Fitness, Insurance, Real Estate, Sports, Schools, etc. from all over
+            the country. Holding information right from major cities like
+            Mumbai, Delhi, Bangalore, Hyderabad, Chennai, Ahmedabad and Pune our
+            reach stretches out to other smaller cities across the country too.
           </p>
-          
+
           <p className="text-sm text-gray-600 mb-6">
-            Our 'Free Listing' feature gives a platform to showcase varied specialities. We then furnish you with the information via phone, SMS, web, App and WAP as well as, create a space for you to share your experiences through our 'Rate & Review' feature. Through the 'Best Deals', 'Last Minute Deals' and 'Live Quotes', we make sure that you are offered the best bargains in the market.
+            Our 'Free Listing' feature gives a platform to showcase varied
+            specialities. We then furnish you with the information via phone,
+            SMS, web, App and WAP as well as, create a space for you to share
+            your experiences through our 'Rate & Review' feature. Through the
+            'Best Deals', 'Last Minute Deals' and 'Live Quotes', we make sure
+            that you are offered the best bargains in the market.
           </p>
-          
-          <h3 className="text-lg font-bold mb-4">Some of our services that will prove useful to you on a day-to-day basis are :</h3>
-          
+
+          <h3 className="text-lg font-bold mb-4">
+            Some of our services that will prove useful to you on a day-to-day
+            basis are :
+          </h3>
+
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
             <div>
               <div className="flex items-center mb-2">
@@ -483,37 +686,57 @@ function App() {
                 <h4 className="font-bold">B2B</h4>
               </div>
               <p className="text-sm text-gray-600">
-                Experience the ultimate B2B portal by Justdial. You can explore countless diverse categories, innumerable top-quality vendors, and an unmatched wholesale experience. You'll find everything you need for B2B requirements on this exclusive platform. Our interactive interface allows you to apply relevant filters, ascertain the best rates, and get instant assistance via chat.
+                Experience the ultimate B2B portal by Justdial. You can explore
+                countless diverse categories, innumerable top-quality vendors,
+                and an unmatched wholesale experience. You'll find everything
+                you need for B2B requirements on this exclusive platform. Our
+                interactive interface allows you to apply relevant filters,
+                ascertain the best rates, and get instant assistance via chat.
               </p>
             </div>
-            
+
             <div>
               <div className="flex items-center mb-2">
                 <span className="text-gray-400 mr-2">🚀</span>
                 <h4 className="font-bold">All India</h4>
               </div>
               <p className="text-sm text-gray-600">
-                Elevate your search for B2B requisites. From lead generation to promoting and selling products/services, Justdial enables enterprises to reach vast audiences all across India. Embracing digital strategies, Justdial India encompasses manufacturers, dealers, suppliers, vendors, wholesalers, and more, offering convenience in the B2B market space and empowering businesses nationwide.
+                Elevate your search for B2B requisites. From lead generation to
+                promoting and selling products/services, Justdial enables
+                enterprises to reach vast audiences all across India. Embracing
+                digital strategies, Justdial India encompasses manufacturers,
+                dealers, suppliers, vendors, wholesalers, and more, offering
+                convenience in the B2B market space and empowering businesses
+                nationwide.
               </p>
             </div>
-            
+
             <div>
               <div className="flex items-center mb-2">
                 <span className="text-gray-400 mr-2">📦</span>
                 <h4 className="font-bold">Packers and Movers</h4>
               </div>
               <p className="text-sm text-gray-600">
-                If you're relocating to another place, or even if you just want to send some belongings elsewhere, find the best deals on the most reliable packers and movers for your location. Get quotes from multiple agencies, read reviews from previous customers, and check ratings before making a selection for a hassle-free experience.
+                If you're relocating to another place, or even if you just want
+                to send some belongings elsewhere, find the best deals on the
+                most reliable packers and movers for your location. Get quotes
+                from multiple agencies, read reviews from previous customers,
+                and check ratings before making a selection for a hassle-free
+                experience.
               </p>
             </div>
-            
+
             <div>
               <div className="flex items-center mb-2">
                 <span className="text-gray-400 mr-2">🍽️</span>
                 <h4 className="font-bold">Order Food Online</h4>
               </div>
               <p className="text-sm text-gray-600">
-                You are just three clicks away from placing an order and exploring a wide range of exotic cuisines. Order food online with Justdial and get your favourite food delivered at your doorstep. Search for restaurants, view reviews and ratings, avail discounts and order your food.
+                You are just three clicks away from placing an order and
+                exploring a wide range of exotic cuisines. Order food online
+                with Justdial and get your favourite food delivered at your
+                doorstep. Search for restaurants, view reviews and ratings,
+                avail discounts and order your food.
               </p>
             </div>
           </div>
@@ -526,7 +749,9 @@ function App() {
 // Component for service cards in the slider
 function ServiceCard({ title, subtitle, bgColor, imgUrl }) {
   return (
-    <div className={`${bgColor} text-white rounded-lg overflow-hidden min-w-[250px] flex`}>
+    <div
+      className={`${bgColor} text-white rounded-lg overflow-hidden min-w-[250px] flex`}
+    >
       <div className="p-4">
         <h3 className="font-bold text-lg">{title}</h3>
         <p className="text-sm">{subtitle}</p>
@@ -542,7 +767,7 @@ function ServiceCard({ title, subtitle, bgColor, imgUrl }) {
 function CategoryIcon({ title, icon }) {
   return (
     <div className="flex flex-col items-center">
-      <div className="border rounded-full w-16 h-16 flex items-center justify-center mb-2 hover:border-blue-500 cursor-pointer">
+      <div className="border rounded-lg w-16 h-16 flex items-center justify-center mb-2 hover:border-blue-500 cursor-pointer">
         <span className="text-2xl">{icon}</span>
       </div>
       <span className="text-xs text-center">{title}</span>
@@ -559,7 +784,11 @@ function ServiceSection({ title, services }) {
         {services.map((service, index) => (
           <div key={index} className="flex flex-col items-center">
             <div className="rounded-lg overflow-hidden mb-2 w-full h-32">
-              <img src={service.image} alt={service.name} className="w-full h-full object-cover" />
+              <img
+                src={service.image}
+                alt={service.name}
+                className="w-full h-full object-cover"
+              />
             </div>
             <span className="text-sm text-center">{service.name}</span>
           </div>
@@ -580,7 +809,13 @@ function BillCategory({ name, icon }) {
 }
 
 // Component for activity cards
-function ActivityCard({ businessName, location, image, reviewer, hideReviewer = false }) {
+function ActivityCard({
+  businessName,
+  location,
+  image,
+  reviewer,
+  hideReviewer = false,
+}) {
   return (
     <div className="border rounded-lg overflow-hidden">
       <div className="p-4 flex justify-between items-start">
@@ -592,25 +827,33 @@ function ActivityCard({ businessName, location, image, reviewer, hideReviewer = 
           WhatsApp
         </button>
       </div>
-      
+
       <div className="h-48">
-        <img src={image} alt={businessName} className="w-full h-full object-cover" />
+        <img
+          src={image}
+          alt={businessName}
+          className="w-full h-full object-cover"
+        />
       </div>
-      
+
       {!hideReviewer && reviewer && (
         <div className="p-4 border-t">
           <div className="flex items-center mb-2">
-            <img src={reviewer.image} alt={reviewer.name} className="w-10 h-10 rounded-full mr-3" />
+            <img
+              src={reviewer.image}
+              alt={reviewer.name}
+              className="w-10 h-10 rounded-full mr-3"
+            />
             <div>
               <h4 className="font-bold">{reviewer.name}</h4>
               <p className="text-xs text-gray-600">Wrote a review</p>
             </div>
           </div>
-          
+
           <div className="flex text-orange-500 mb-2">
-            {'★'.repeat(reviewer.rating)}
+            {"★".repeat(reviewer.rating)}
           </div>
-          
+
           <p className="text-sm text-gray-700">{reviewer.review}</p>
         </div>
       )}
