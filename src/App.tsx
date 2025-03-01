@@ -1,7 +1,70 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Search, MapPin, Mic, ChevronRight, ChevronLeft, Facebook, Youtube, Instagram, Linkedin, Twitter } from 'lucide-react';
 
 function App() {
+  const [currentBannerIndex, setCurrentBannerIndex] = useState(0);
+  const [currentSearchTermIndex, setCurrentSearchTermIndex] = useState(0);
+  
+  const banners = [
+    {
+      title: "CCTV & Security",
+      subtitle: "Solutions",
+      buttonText: "GET BEST DEALS",
+      image: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    },
+    {
+      title: "Time to fly at",
+      subtitle: "Lowest Airfares",
+      buttonText: "Book Now",
+      image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    },
+    {
+      title: "Home Appliances",
+      subtitle: "Best Deals",
+      buttonText: "SHOP NOW",
+      image: "https://images.unsplash.com/photo-1556911220-bda9f7f7597e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    },
+    {
+      title: "Health Services",
+      subtitle: "Expert Care",
+      buttonText: "BOOK APPOINTMENT",
+      image: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    },
+  ];
+  
+  const searchTerms = [
+    { text: "4.7 Crore+", highlight: "Businesses" },
+    { text: "5.9 Crore+", highlight: "Products & Services" },
+    { text: "3.2 Crore+", highlight: "Reviews & Ratings" },
+    { text: "2.8 Crore+", highlight: "Photos & Videos" },
+  ];
+
+  // Auto-change banner every 1 second
+  useEffect(() => {
+    const bannerInterval = setInterval(() => {
+      setCurrentBannerIndex((prevIndex) => (prevIndex + 1) % banners.length);
+    }, 1000);
+    
+    return () => clearInterval(bannerInterval);
+  }, [banners.length]);
+  
+  // Auto-change search term every 1 second
+  useEffect(() => {
+    const searchTermInterval = setInterval(() => {
+      setCurrentSearchTermIndex((prevIndex) => (prevIndex + 1) % searchTerms.length);
+    }, 1000);
+    
+    return () => clearInterval(searchTermInterval);
+  }, [searchTerms.length]);
+
+  const goToNextBanner = () => {
+    setCurrentBannerIndex((prevIndex) => (prevIndex + 1) % banners.length);
+  };
+
+  const goToPrevBanner = () => {
+    setCurrentBannerIndex((prevIndex) => (prevIndex - 1 + banners.length) % banners.length);
+  };
+
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -42,19 +105,20 @@ function App() {
       <section className="py-6 bg-white">
         <div className="container mx-auto px-4">
           <h1 className="text-2xl font-bold mb-4">
-            Search across <span className="text-gray-700">' 5.9 Crore+'</span> <span className="text-blue-600">Products & Services</span>
+            Search across <span className="text-gray-700">'{searchTerms[currentSearchTermIndex].text}'</span> <span className="text-blue-600">{searchTerms[currentSearchTermIndex].highlight}</span>
           </h1>
           
           <div className="flex flex-col md:flex-row gap-2 mb-6">
-            <div className="border rounded-md flex items-center px-3 py-2 flex-1 max-w-xs">
+            <div className="border rounded-md flex items-center px-3 py-2 w-48">
               <MapPin className="text-gray-400 mr-2" size={20} />
               <input 
                 type="text" 
-                placeholder="Mansarovar, Jaipur" 
+                placeholder="Mumbai" 
                 className="outline-none w-full"
+                contentEditable
               />
             </div>
-            <div className="border rounded-md flex items-center px-3 py-2 flex-1">
+            <div className="border rounded-md flex items-center px-3 py-2 w-96">
               <input 
                 type="text" 
                 placeholder="Search for Spa & Salons" 
@@ -65,9 +129,6 @@ function App() {
                 <Search size={20} />
               </button>
             </div>
-          </div>
-
-          <div className="flex justify-end mb-4">
             <button className="flex items-center bg-gray-100 text-gray-800 px-3 py-1 rounded-md hover:bg-gray-200">
               Download App
               <span className="ml-2 text-2xl font-bold">
@@ -82,61 +143,102 @@ function App() {
       {/* Banner Section */}
       <section className="mb-8 relative">
         <div className="container mx-auto px-4">
-          <div className="relative rounded-lg overflow-hidden">
-            <img 
-              src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
-              alt="Travel Banner" 
-              className="w-full h-64 object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-400/80 to-transparent flex flex-col justify-center pl-12">
-              <h2 className="text-2xl font-bold text-white mb-2">Time to fly at</h2>
-              <h3 className="text-3xl font-bold text-white mb-4">Lowest Airfares</h3>
-              <button className="bg-blue-800 text-white px-6 py-2 rounded-md w-max hover:bg-blue-900">
-                Book Now
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Main Banner (takes half the space) */}
+            <div className="relative rounded-lg overflow-hidden h-64">
+              <div className="relative h-full">
+                {banners.map((banner, index) => (
+                  <div 
+                    key={index}
+                    className={`absolute inset-0 transition-opacity duration-500 ${
+                      index === currentBannerIndex ? 'opacity-100' : 'opacity-0'
+                    }`}
+                  >
+                    <img 
+                      src={banner.image} 
+                      alt={banner.title} 
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-400/80 to-transparent flex flex-col justify-center pl-12">
+                      <h2 className="text-2xl font-bold text-white mb-2">{banner.title}</h2>
+                      <h3 className="text-3xl font-bold text-white mb-4">{banner.subtitle}</h3>
+                      <button className="bg-blue-800 text-white px-6 py-2 rounded-md w-max hover:bg-blue-900">
+                        {banner.buttonText}
+                      </button>
+                      {index === 1 && (
+                        <div className="mt-4 text-white text-sm">Powered by EaseMyTrip.com</div>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+              
+              {/* Banner navigation dots */}
+              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                {banners.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentBannerIndex(index)}
+                    className={`w-2 h-2 rounded-full ${
+                      index === currentBannerIndex ? 'bg-white' : 'bg-white/50'
+                    }`}
+                    aria-label={`Go to slide ${index + 1}`}
+                  />
+                ))}
+              </div>
+              
+              {/* Banner navigation arrows */}
+              <button 
+                onClick={goToPrevBanner}
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/30 hover:bg-white/50 rounded-full p-2"
+                aria-label="Previous banner"
+              >
+                <ChevronLeft size={24} className="text-white" />
               </button>
-              <div className="mt-4 text-white text-sm">Powered by EaseMyTrip.com</div>
+              <button 
+                onClick={goToNextBanner}
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/30 hover:bg-white/50 rounded-full p-2"
+                aria-label="Next banner"
+              >
+                <ChevronRight size={24} className="text-white" />
+              </button>
             </div>
-          </div>
-        </div>
-
-        {/* Service Categories Slider */}
-        <div className="container mx-auto px-4 -mt-6 relative z-10">
-          <div className="flex overflow-x-auto gap-4 pb-4">
-            <ServiceCard 
-              title="B2B" 
-              subtitle="Quick Quotes"
-              bgColor="bg-blue-600"
-              imgUrl="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
-            />
-            <ServiceCard 
-              title="REPAIRS & SERVICES" 
-              subtitle="Get Nearest Vendor"
-              bgColor="bg-blue-800"
-              imgUrl="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
-            />
-            <ServiceCard 
-              title="REAL ESTATE" 
-              subtitle="Finest Agents"
-              bgColor="bg-indigo-600"
-              imgUrl="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
-            />
-            <ServiceCard 
-              title="DOCTORS" 
-              subtitle="Book Now"
-              bgColor="bg-emerald-600"
-              imgUrl="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
-            />
-          </div>
-          
-          <div className="absolute top-1/2 -left-4 transform -translate-y-1/2">
-            <button className="bg-white rounded-full p-2 shadow-md hover:bg-gray-100">
-              <ChevronLeft size={24} />
-            </button>
-          </div>
-          <div className="absolute top-1/2 -right-4 transform -translate-y-1/2">
-            <button className="bg-white rounded-full p-2 shadow-md hover:bg-gray-100">
-              <ChevronRight size={24} />
-            </button>
+            
+            {/* Other 4 Banners in a single line */}
+            <div className="flex gap-4 h-64">
+              <ServiceCard 
+                title="B2B" 
+                subtitle="Quick Quotes"
+                bgColor="bg-blue-600"
+                imgUrl="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+                height="h-64"
+                width="w-1/4"
+              />
+              <ServiceCard 
+                title="REPAIRS & SERVICES" 
+                subtitle="Get Nearest Vendor"
+                bgColor="bg-blue-800"
+                imgUrl="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+                height="h-64"
+                width="w-1/4"
+              />
+              <ServiceCard 
+                title="REAL ESTATE" 
+                subtitle="Finest Agents"
+                bgColor="bg-indigo-600"
+                imgUrl="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+                height="h-64"
+                width="w-1/4"
+              />
+              <ServiceCard 
+                title="DOCTORS" 
+                subtitle="Book Now"
+                bgColor="bg-emerald-600"
+                imgUrl="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+                height="h-64"
+                width="w-1/4"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -526,12 +628,12 @@ function App() {
 // Component for service cards in the slider
 function ServiceCard({ title, subtitle, bgColor, imgUrl }) {
   return (
-    <div className={`${bgColor} text-white rounded-lg overflow-hidden min-w-[250px] flex`}>
-      <div className="p-4">
-        <h3 className="font-bold text-lg">{title}</h3>
-        <p className="text-sm">{subtitle}</p>
+    <div className={`${bgColor} text-white rounded-lg overflow-hidden h-full flex flex-col`}>
+      <div className="p-3 flex-1">
+        <h3 className="font-bold text-sm md:text-base">{title}</h3>
+        <p className="text-xs md:text-sm">{subtitle}</p>
       </div>
-      <div className="w-1/2">
+      <div className="h-1/2">
         <img src={imgUrl} alt={title} className="h-full w-full object-cover" />
       </div>
     </div>
