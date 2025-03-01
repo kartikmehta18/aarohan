@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 
 import { Mail } from "lucide-react";
+import CategorySection from './Foot';
 function App() {
 
   
@@ -917,6 +918,7 @@ function App() {
             With an endless number of things under the sun, you can be sure this
             will be your 'One Stop Shop' to find everything and more.
           </p>
+          <CategorySection/>
           <h2 className="text-xl font-bold mb-4">Trending Searches</h2>
 
           <p className="text-sm text-gray-400 mb-4">
@@ -957,6 +959,17 @@ function App() {
             DelhiMumbaiBangaloreHyderabadChennaiPuneAhmedabadKolkataJaipurChandigarhCoimbatoreLucknowSuratIndorePatnaNagpurErnakulamBhopalVadodaraLudhianaKanpurNashikVaranasiVisakhapatnamRajkotRaipur-ChhattisgarhVijayawadaMaduraiRanchiGoaThiruvananthapuramBhubaneshwarAllahabadAurangabad-MaharashtraDehradunMysoreTrichyGuwahatiAgraKozhikodeJodhpurThrissurKolhapurSalemMeerutMangaloreGorakhpurJabalpurJalandharGwalior
           </p>
         </div>
+         {/* Action Buttons */}
+         <div className="fixed right-0 top-1/2 transform -translate-y-1/2 flex flex-col gap-2 z-10">
+          <a href="/advertise" className="bg-orange-500 text-white px-4 py-3 text-sm font-medium rotate-90 origin-right transform translate-x-8 hover:bg-orange-600 transition-colors">
+            Advertise
+          </a>
+          <a href="/free-listing" className="bg-blue-500 text-white px-4 py-3 text-sm font-medium rotate-90 origin-right transform translate-x-8 hover:bg-blue-600 transition-colors">
+            Free Listing
+          </a>
+        </div>
+        
+     
       </footer>
     </div>
   );
