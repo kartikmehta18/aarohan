@@ -682,6 +682,52 @@ function App() {
 
             <div>
               <div className="flex items-center mb-2">
+                <span className="text-gray-400 mr-2">💼</span>
+                <h4 className="font-bold">B2B</h4>
+              </div>
+              <p className="text-sm text-gray-600">
+                Experience the ultimate B2B portal by Justdial. You can explore
+                countless diverse categories, innumerable top-quality vendors,
+                and an unmatched wholesale experience. You'll find everything
+                you need for B2B requirements on this exclusive platform. Our
+                interactive interface allows you to apply relevant filters,
+                ascertain the best rates, and get instant assistance via chat.
+              </p>
+            </div>
+            <div>
+              <div className="flex items-center mb-2">
+                <span className="text-gray-400 mr-2">💼</span>
+                <h4 className="font-bold">B2B</h4>
+              </div>
+              <p className="text-sm text-gray-600">
+                Experience the ultimate B2B portal by Justdial. You can explore
+                countless diverse categories, innumerable top-quality vendors,
+                and an unmatched wholesale experience. You'll find everything
+                you need for B2B requirements on this exclusive platform. Our
+                interactive interface allows you to apply relevant filters,
+                ascertain the best rates, and get instant assistance via chat.
+              </p>
+            </div>
+
+            <div>
+              <div className="flex items-center mb-2">
+                <span className="text-gray-400 mr-2">💼</span>
+                <h4 className="font-bold">B2B</h4>
+              </div>
+              <p className="text-sm text-gray-600">
+                Experience the ultimate B2B portal by Justdial. You can explore
+                countless diverse categories, innumerable top-quality vendors,
+                and an unmatched wholesale experience. You'll find everything
+                you need for B2B requirements on this exclusive platform. Our
+                interactive interface allows you to apply relevant filters,
+                ascertain the best rates, and get instant assistance via chat.
+              </p>
+            </div>
+
+            
+
+            <div>
+              <div className="flex items-center mb-2">
                 <span className="text-gray-400 mr-2">🚀</span>
                 <h4 className="font-bold">All India</h4>
               </div>
